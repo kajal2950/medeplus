@@ -1,0 +1,73 @@
+{% extends "base.html" %} 
+{% load static %}
+{% block body %}
+<!-- Breadcrumbs -->
+<div class="breadcrumbs overlay">
+    <div class="container">
+        <div class="bread-inner">
+            <div class="row">
+                <div class="col-12">
+                    <h2>Our Gallery</h2>
+                    <ul class="bread-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><i class="icofont-simple-right"></i></li>
+                        <li class="active">Our Gallery</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Breadcrumbs -->
+
+<!-- Single News -->
+<section class="news-single section">
+    <div class="container">
+        <div class="row">
+            
+            
+                <div class="row">
+					<div class="col-lg-3 col-md-6 col-12">
+						<!-- Single Blog -->
+						<div class="card h-100">
+                            <img src="{% static 'img/blog1.jpg'	%}" class="card-img-top" alt="...">
+                            
+                        </div>
+						<!-- End Single Blog -->
+					</div>
+					<div class="col-lg-3 col-md-6 col-12">
+						<!-- Single Blog -->
+						<div class="card h-100">
+                            <img src="{% static 'img/blog1.jpg'	%}" class="card-img-top" alt="...">
+                            
+                        </div>
+						<!-- End Single Blog -->
+					</div>
+					<div class="col-lg-3 col-md-6 col-12">
+						<!-- Single Blog -->
+						<div class="card h-100">
+                            <img src="{% static 'img/blog1.jpg'	%}" class="card-img-top" alt="...">
+                            
+                        </div>
+						<!-- End Single Blog -->
+					</div>
+                    <div class="col-lg-3 col-md-6 col-12">
+						<!-- Single Blog -->
+						<div class="card h-100">
+                            <img src="{% static 'img/blog1.jpg'	%}" class="card-img-top" alt="...">
+                            
+                        </div>
+						<!-- End Single Blog -->
+					</div>
+				</div>
+                
+            
+            
+        </div>
+    </div>
+</section>
+<!--/ End Single News -->
+
+
+
+{% endblock body %}

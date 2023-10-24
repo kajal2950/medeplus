@@ -1,0 +1,78 @@
+{% extends "base.html" %} 
+{% load static %}
+{% block body %}
+<!-- Breadcrumbs -->
+<div class="breadcrumbs overlay">
+    <div class="container">
+        <div class="bread-inner">
+            <div class="row">
+                <div class="col-12">
+                    <h2>Our Services</h2>
+                    <ul class="bread-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><i class="icofont-simple-right"></i></li>
+                        <li class="active">Our Services</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Breadcrumbs -->
+
+<!-- Single News -->
+<section class="news-single section">
+    <div class="container">
+        <div class="row">
+            
+            <div class="col-lg-8 col-12">
+                <div class="row">
+                    {% for i in ser %}
+					<div class="col-lg-6 col-md-6 col-12" style="padding-bottom:15px;">
+						<!-- Single Blog -->
+						<div class="card h-100">
+                            <a  href="/service_details/{{i.slug}}"><img src="{{i.image.url}}" class="card-img-top" alt="..."></a>
+                            <div class="card-body">
+                                <a  href="/service_details/{{i.slug}}"><h5 class="card-title">{{i.name}}</h5></a>
+                                    <a  href="/service_details/{{i.slug}}"><p class="card-text">{{i.desc}}</p></a>
+                            </div>
+                        </div>
+						<!-- End Single Blog -->
+					</div>
+                    {% endfor %}
+				</div>
+                
+            </div>
+            <div class="col-lg-4 col-12">
+                <div class="main-sidebar">
+                    <!-- Single Widget -->
+                    
+                    <!--/ End Single Widget -->
+                    <!-- Single Widget -->
+                    <div class="single-widget category">
+                        <h3 class="title">Our Services</h3>
+                        <ul class="categor-list">
+                            {% for i in ser %}
+                            <li><a href="#">{{i.name}}</a></li>
+                            {% endfor  %}
+                            
+                        </ul>
+                    </div>
+                    <!--/ End Single Widget -->
+                    <!-- Single Widget -->
+                    <!--/ End Single Widget -->
+                    <!-- Single Widget -->
+                    <!--/ End Single Widget -->
+                    <!-- Single Widget -->
+                    
+                    <!--/ End Single Widget -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/ End Single News -->
+
+
+
+{% endblock body %}
